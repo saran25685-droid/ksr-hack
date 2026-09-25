@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusFix AI | Report. Resolve. Improve.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+  <style>.toast{position:fixed;top:20px;left:50%;right:auto;bottom:auto;z-index:30;min-width:280px;max-width:min(520px,calc(100vw - 32px));padding:13px 18px;border-radius:8px;box-shadow:0 12px 30px rgba(31,55,44,.18);transform:translate(-50%,-18px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;background:#17231f;color:#fff;border-left:4px solid #73807c}.toast.show{transform:translate(-50%,0);opacity:1}.toast.success{background:#226b52;border-left-color:#b8e3c8}.toast.error{background:#a94740;border-left-color:#ffd1cb}.toast.info{background:#805f1b;border-left-color:#ffe0a0}</style>
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <section id="login-screen" class="login-shell">
+    <div class="login-art"><div class="brand-mark">CF</div><p class="eyebrow">SMART CAMPUS OPERATIONS</p><h1>CampusFix AI</h1><p>Report. Resolve. Improve.</p><div class="art-note">One clear place to turn everyday campus friction into visible action.</div></div>
+    <form id="login-form" class="login-card"><p class="eyebrow">WELCOME BACK</p><h2 id="login-heading">Student portal</h2><p class="muted" id="login-description">Sign in to report and track campus issues.</p><div class="demo-accounts"><button type="button" class="selected" data-demo="student">Student login</button><button type="button" data-demo="admin">Admin login</button></div><label>Email or username<input id="email" type="text" value="student@campus.com" required></label><label>Password<input id="password" type="password" value="student123" required></label><button class="button primary full" type="submit">Open dashboard <span>→</span></button><p class="hint">Student: student@campus.com / student123<br>Admin: admin@campus.com / admin123</p><button type="button" class="button ghost full" id="show-register">Create a new student account</button></form>
+    <form id="register-form" class="login-card hidden"><p class="eyebrow">NEW ACCOUNT</p><h2>Create student account</h2><p class="muted">Register to report and track your own campus issues.</p><label>Full name<input id="register-name" required></label><label>Email or username<input id="register-email" required></label><label>Password<input id="register-password" type="password" minlength="6" required></label><label>Confirm password<input id="register-confirm" type="password" minlength="6" required></label><button class="button primary full" type="submit">Create account <span>→</span></button><button type="button" class="button ghost full" id="show-login">Back to login</button></form>
+  </section>
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar"><div class="brand"><div class="brand-mark small">CF</div><div><strong>CampusFix</strong><span>AI operations</span></div></div><nav id="nav"></nav><div class="sidebar-bottom"><div class="mini-profile"><div id="avatar" class="avatar">AS</div><div><strong id="user-name">User</strong><span id="user-role">Role</span></div></div><button id="logout" class="logout">↪ <span>Sign out</span></button></div></aside>
+    <main class="main"><header class="topbar"><div><p class="eyebrow" id="section-kicker">OVERVIEW</p><h2 id="page-title">Good morning</h2></div><div class="top-actions"><button id="notification-button" class="icon-button" title="Notifications">♢<i id="notification-dot"></i></button><div class="date-chip" id="today"></div></div></header><div id="content"></div></main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
